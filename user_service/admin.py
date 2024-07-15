@@ -21,6 +21,8 @@ class UserAdmin(DjangoUserAdmin):
                     "is_superuser",
                     "groups",
                     "user_permissions",
+                    "is_email_verified",
+                    "verification_token",
                 )
             },
         ),
