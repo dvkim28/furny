@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "rest_framework",
     "user_service",
+    "furniture_service",
 
 ]
 
@@ -134,3 +135,6 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+MEDIA_URL='/media/'
+MEDIA_ROOT = BASE_DIR /'media'
