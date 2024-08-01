@@ -7,11 +7,11 @@ from user_service.utils import send_verification_email
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = get_user_model()
-        fields = ["id", "email", "password", "is_staff"]
+        fields = ["id", "email", "password", "is_staff", "is_email_verified"]
         extra_kwargs = {
             "password": {"min_length": 5, "write_only": True},
         }
-        read_only_fields = ["id", "is_staff"]
+        read_only_fields = ["id", "is_staff", "is_email_verified"]
 
     def create(self, validated_data):
         user = get_user_model().objects.create_user(**validated_data)

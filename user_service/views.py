@@ -2,7 +2,6 @@ from django.contrib.auth import get_user_model
 from rest_framework import generics, viewsets, permissions, status
 from rest_framework.response import Response
 from django.contrib.auth.models import User
-from verify_email import send_verification_email
 
 from user_service.serializers import UserSerializer, ManageUserSerializer
 

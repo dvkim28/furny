@@ -40,9 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "corsheaders"
     "rest_framework_simplejwt",
     "rest_framework",
-    "verify_email.apps.VerifyEmailConfig",
     "user_service",
     "furniture_service",
 
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -148,3 +149,7 @@ EMAIL_HOST_USER = os.environ['EMAIL_ID']
 EMAIL_HOST_PASSWORD = os.environ['EMAIL_PW']
 
 DEFAULT_FROM_EMAIL = 'd.villarionovich@gmail.com'
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
