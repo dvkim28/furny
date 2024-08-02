@@ -48,7 +48,6 @@ INSTALLED_APPS = [
 
 ]
 
-
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -96,7 +95,7 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation."
-        "UserAttributeSimilarityValidator",
+                "UserAttributeSimilarityValidator",
     },
     {
         "NAME": "django.contrib.auth.password_validation." "MinimumLengthValidator",
@@ -138,8 +137,8 @@ REST_FRAMEWORK = {
     )
 }
 
-MEDIA_URL='/media/'
-MEDIA_ROOT = BASE_DIR /'media'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -152,4 +151,6 @@ DEFAULT_FROM_EMAIL = 'd.villarionovich@gmail.com'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://127.0.0.1:5173",
+    "http://localhost:5173",
 ]
