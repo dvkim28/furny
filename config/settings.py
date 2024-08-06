@@ -149,6 +149,7 @@ EMAIL_HOST_PASSWORD = os.environ['EMAIL_PW']
 
 DEFAULT_FROM_EMAIL = 'd.villarionovich@gmail.com'
 
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:5173",
